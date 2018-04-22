@@ -4,13 +4,13 @@ import numpy as np
 
 import model.helper as model_helper
 
-image_path = "./data/castle.jpg"
-weights_path = "./data/googlenet_places365.npy"
-labels_path = "./data/labels.txt"
+image_path = "./model/bus.jpg"
+weights_path = "./model/vgg_caffe_model.npy"
+labels_path = "./model/labels.txt"
 
 
 def main(unused_arguments):
-    helper = model_helper.Helper('googlenet')
+    helper = model_helper.Helper('vgg16')
 
     # Load the input
     np_image = load_the_image(image_path, helper)
